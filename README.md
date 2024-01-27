@@ -16,7 +16,14 @@ Arg WP Alert Box is a WordPress plugin that displays alert messages stored in se
 # Usage 
 1. **Displaying Alerts:**
    - After installing the plugin, include the function `arg_display_alert()` within your theme header or wherever you want to display alerts.
-   - Example usage: `<div class="ct-alert-container"><?php arg_display_alert(); ?></div>`
+   - Example usage: 
+      ```php
+      <?php if (function_exists('arg_display_alert')) : ?>
+         <div class="ct-alert-container">
+            <?php arg_display_alert(); ?>
+         </div>
+      <?php endif; ?>
+      ```
 
 2. **Populating Alerts:**
    - To display alerts, you need to populate the session variable `$_SESSION['ct_alert']` with alert data.
