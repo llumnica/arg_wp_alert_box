@@ -23,7 +23,10 @@ With Arg WP Alert Box, you can effortlessly integrate both static and dynamic al
 # Usage 
 1. **Displaying Alerts:**
    - After installing the plugin, include the function `arg_display_alert()` within your theme header or wherever you want to display alerts.
-   - Example usage: `<?php if (function_exists('arg_display_alert')) arg_display_alert(); ?>`
+   - Example usage:  
+    ```php
+        <?php if (function_exists('arg_display_alert')) arg_display_alert(); ?>
+    ```
 
 2. **Populating Alerts:**
    - To display alerts, you need to populate the session variable `$_SESSION['ct_alert']` with alert data.
@@ -47,7 +50,7 @@ With Arg WP Alert Box, you can effortlessly integrate both static and dynamic al
      ```
    - Each alert should be an associative array with 'type' (e.g., success, error, warning) and 'content' keys.
 
-   3. **Displaying AJAX Alerts:**
+3. **Displaying AJAX Alerts:**
    - To display AJAX alerts, utilize the `displayAjaxAlert` function provided by the plugin after performing AJAX requests in your JavaScript code. This function allows you to show custom alerts dynamically.
    - Ensure the `displayAjaxAlert` script is included in your WordPress theme or plugin.
    - Call the function with appropriate parameters (`type` and `content`) after AJAX calls to display alerts based on the outcome.
