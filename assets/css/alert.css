@@ -6,6 +6,8 @@
     flex-direction: column;
     align-items: flex-end;
     z-index: 9999;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .ct-alert {
@@ -54,4 +56,28 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+.ct-alert-container::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.ct-alert-container::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); 
+}
+
+.ct-alert-container::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 4px; 
+}
+
+.ct-alert-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+
+@media (max-width: 767px) {
+    .ct-alert {
+        width: 220px;
+    }
 }
